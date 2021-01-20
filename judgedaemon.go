@@ -438,7 +438,7 @@ func judge(endpoint *endpoint, task judgetask, workDirPath string) bool {
 	judgingRunData.Set("runtime", runTime)
 	judgingRunData.Set("output_run", restEncodeFile(fmt.Sprintf("%v/program.out", testcasedir), -1))
 	judgingRunData.Set("output_error", restEncodeFile(fmt.Sprintf("%v/program.err", testcasedir), outputStorageLimit))
-	judgingRunData.Set("output_system", restEncodeFile(fmt.Sprintf("%v/program.out", testcasedir), outputStorageLimit))
+	judgingRunData.Set("output_system", restEncodeFile(fmt.Sprintf("%v/system.out", testcasedir), outputStorageLimit))
 	judgingRunData.Set("output_diff", restEncodeFile(fmt.Sprintf("%v/feedback/judgemessage.txt", testcasedir), outputStorageLimit))
 	judgingRunData.Set("metadata", restEncodeFile(fmt.Sprintf("%v/program.meta", testcasedir), outputStorageLimit))
 	judgingRunData.Set("hostname", hostname)
